@@ -25,8 +25,7 @@ class OrdersController < ApplicationController
   # GET /orders/new.json
   def new
     @order = Order.new
-
-    respond_to do |format|
+    respond_to do |format| 
       format.html # new.html.erb
       format.json { render json: @order }
     end
@@ -44,6 +43,8 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
+        OrderMailer.new_order_msg(@order).deliver
+        flash[:notice] = "#{@order.id} has been added as a new order and you will be notified by email."
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render json: @order, status: :created, location: @order }
       else

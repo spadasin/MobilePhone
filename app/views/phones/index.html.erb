@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>Photo</th>
+    <th>ID</th>
     <th>Brand</th>
     <th>Name</th>
     <th>Description</th>
@@ -14,11 +16,14 @@
 
 <% @phones.each do |phone| %>
   <tr>
+    <td><%= image_tag phone.photo_url %></td>
+    <td><%= phone.id %></td>
     <td><%= phone.brand %></td>
     <td><%= phone.name %></td>
     <td><%= phone.description %></td>
     <td><%= phone.price %></td>
     <td><%= phone.quantityInStock %></td>
+    <td><%= link_to 'Buy', new_order_path(phone.id) %></td>
     <td><%= link_to 'Show', phone %></td>
     <td><%= link_to 'Edit', edit_phone_path(phone) %></td>
     <td><%= link_to 'Destroy', phone, confirm: 'Are you sure?', method: :delete %></td>

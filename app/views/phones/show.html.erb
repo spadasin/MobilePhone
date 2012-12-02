@@ -1,4 +1,10 @@
 <p id="notice"><%= notice %></p>
+  
+<p>
+<% unless @phone.photo_url.nil? %>
+  <p><%= image_tag @phone.photo_url%></p>
+<% end %>
+</p>
 
 <p>
   <b>Brand:</b>
