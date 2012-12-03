@@ -1,4 +1,6 @@
 MobilePhone::Application.routes.draw do
+  get "cart/new"
+
   resources :orders
 
   get "pages/Home"
