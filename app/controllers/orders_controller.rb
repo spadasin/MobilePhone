@@ -24,8 +24,14 @@ class OrdersController < ApplicationController
   # GET /orders/new
   # GET /orders/new.json
   def new
+    @phone = Phone.find(params[:id])
+    session[:phone] = @phone.id
     @order = Order.new
+<<<<<<< HEAD
     respond_to do |format| 
+=======
+    respond_to do |format|
+>>>>>>> PhoneIDinOrderForm
       format.html # new.html.erb
       format.json { render json: @order }
     end
@@ -39,8 +45,8 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(params[:order])
-
+    @phone = Phone.find(session[:phone])
+    @order = @phone.orders.new(params[:order])
     respond_to do |format|
       if @order.save
         OrderMailer.new_order_msg(@order).deliver
