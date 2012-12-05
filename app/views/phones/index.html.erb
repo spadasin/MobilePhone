@@ -19,6 +19,7 @@
     <td><%= phone.description %></td>
     <td><%= phone.price %></td>
     <td><%= phone.quantityInStock %></td>
+    <td><%= link_to 'Buy', :controller => :orders, :action => :new, :id => phone.id %></td>
     <td><%= link_to 'Show', phone %></td>
     <td><%= link_to 'Edit', edit_phone_path(phone) %></td>
     <td><%= link_to 'Destroy', phone, confirm: 'Are you sure?', method: :delete %></td>
