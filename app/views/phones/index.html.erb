@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>Photo</th>
+    <th>ID</th>
     <th>Brand</th>
     <th>Name</th>
     <th>Description</th>
@@ -14,6 +16,8 @@
 
 <% @phones.each do |phone| %>
   <tr>
+    <td><%= image_tag phone.photo_url %></td>
+    <td><%= phone.id %></td>
     <td><%= phone.brand %></td>
     <td><%= phone.name %></td>
     <td><%= phone.description %></td>
