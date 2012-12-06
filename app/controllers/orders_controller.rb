@@ -27,11 +27,8 @@ class OrdersController < ApplicationController
     @phone = Phone.find(params[:id])
     session[:phone] = @phone.id
     @order = Order.new
-<<<<<<< HEAD
     respond_to do |format| 
-=======
-    respond_to do |format|
->>>>>>> PhoneIDinOrderForm
+
       format.html # new.html.erb
       format.json { render json: @order }
     end

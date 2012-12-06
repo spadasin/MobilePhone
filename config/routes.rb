@@ -15,7 +15,7 @@ MobilePhone::Application.routes.draw do
   resources :phones
 
   root :to => 'pages#Home'
-  match 'orders/new.:id' => 'orders#new'
+  match 'orders/new/:id' => 'orders#new'
   match 'pages/AboutUs' => 'pages#aboutus'
   match 'pages/ContactUs' => 'pages#contactus'
   match 'pages/PrivacyPolicy' => 'pages#privacypolicy'
