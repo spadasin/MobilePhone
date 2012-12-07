@@ -1,5 +1,14 @@
 MobilePhone::Application.routes.draw do
+ # get "sessions/new"
+
+  get "cart/new"
+  resources :sessions
   resources :orders
+  get "log_in" => "sessions#new", :as => "log_in"
+
+  get "sign_up" => "customers#new", :as => "sign_up"
+
+  get "log_out" => "sessions#destroy", :as => "log_out"
 
   get "pages/Home"
 
