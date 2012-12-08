@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20121201220935) do
+=======
+ActiveRecord::Schema.define(:version => 20121207062653) do
+>>>>>>> 601dec4df2546a11b3b32f82747403f356c6d0eb
 
   create_table "customers", :force => true do |t|
     t.string   "firstName"
@@ -19,8 +23,10 @@ ActiveRecord::Schema.define(:version => 20121201220935) do
     t.string   "email"
     t.string   "phone"
     t.string   "address"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "password_salt"
+    t.string   "password_hash"
   end
 
   create_table "orders", :force => true do |t|
