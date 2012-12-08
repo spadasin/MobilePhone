@@ -1,13 +1,11 @@
 MobilePhone::Application.routes.draw do
-<<<<<<< HEAD
   get "cart/new"
 
-=======
+
  # get "sessions/new"
 
   get "cart/new"
   resources :sessions
->>>>>>> 601dec4df2546a11b3b32f82747403f356c6d0eb
   resources :orders
   get "log_in" => "sessions#new", :as => "log_in"
 

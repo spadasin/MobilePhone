@@ -23,12 +23,9 @@
     <td><%= phone.description %></td>
     <td><%= phone.price %></td>
     <td><%= phone.quantityInStock %></td>
-<<<<<<< HEAD
     <td><%= link_to 'Buy', :controller => :orders, :action => :new, :id => phone.id %></td>
-=======
     <% if signed_in? %>
 		<td><%= link_to 'Buy', :controller => :orders, :action => :new, :id => phone.id %></td>
->>>>>>> 601dec4df2546a11b3b32f82747403f356c6d0eb
     <td><%= link_to 'Show', phone %></td>
 		
 	<% else %>
