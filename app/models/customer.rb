@@ -16,6 +16,10 @@ class Customer < ActiveRecord::Base
 						:length => {:within => 6..40}
   
  
+ def proper_name
+	firstName + " " + lastName
+ end 
+ 
   def has_password?(submitted_password)
 	encrypted_password == encrypt(submitted_password)
   end
