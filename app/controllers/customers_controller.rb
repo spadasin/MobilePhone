@@ -44,7 +44,11 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.save
+<<<<<<< HEAD
         format.html { redirect_to @customer, notice: "#{@customer.proper_name} was successfully created." }
+=======
+        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
+>>>>>>> f2b71379402b811315b12b76aa38be4b48e37f2a
         format.json { render json: @customer, status: :created, location: @customer }
       else
 	   @title = "Sign up"
@@ -61,7 +65,11 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.update_attributes(params[:customer])
+<<<<<<< HEAD
         format.html { redirect_to @customer, notice: "#{@customer.proper_name} was successfully updated." }
+=======
+        format.html { redirect_to @customer, notice: 'Customer was successfully updated.' }
+>>>>>>> f2b71379402b811315b12b76aa38be4b48e37f2a
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

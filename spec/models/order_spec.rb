@@ -69,7 +69,11 @@ describe Order do
 
      describe "show only the iphones that are available" do
        it "should return the available phone IDs" do
+<<<<<<< HEAD
          Order.exsitedPhones.map{|v| v.name}.should == ["1"]
+=======
+  #       Order.exsitedPhones.map{|v| v.name}.should == ["1"]
+>>>>>>> f2b71379402b811315b12b76aa38be4b48e37f2a
    #    Order.joins(:phones).where(:phones => { :name.nil? => false })
         end
         it "should have the right phone id" do

@@ -2,7 +2,11 @@
 <html>
 <head>
   <title>MobilePhone</title>
+<<<<<<< HEAD
   <%= stylesheet_link_tag    "style", :media => "all" %>
+=======
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+>>>>>>> f2b71379402b811315b12b76aa38be4b48e37f2a
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -12,7 +16,17 @@
     <div class="navbar-inner">
       <div class="container">
 	<a class="btn btn-navbar">
+<<<<<<< HEAD
 	<%= render 'partials/header' %>
+=======
+		<% if signed_in? %>
+		Logged in as <%= @current_customer.email %>
+		<%= link_to "Log out", log_out_path %>
+	<% else %>
+		<%= link_to "Sign up", sign_up_path %> or
+		<%= link_to "Log in", log_in_path %>
+	<% end %>	
+>>>>>>> f2b71379402b811315b12b76aa38be4b48e37f2a
 			<div class="navbar navbar-fixed-top">
 			  <div class="navbar-inner">
 			    <div class="container">
@@ -47,8 +61,15 @@
 <div class="container">
   <div class="row">
     <div class="span9"><%= yield %></div>
+<<<<<<< HEAD
     
 <%= render 'partials/footer' %> 
+=======
+    <div class="span3">
+      <h2>About Us</h2>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+>>>>>>> f2b71379402b811315b12b76aa38be4b48e37f2a
   </div>
 </div>
 
